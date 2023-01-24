@@ -27,7 +27,11 @@ home_decor	710000
 5
 
 8. In the order_reviews table, create a new column with a description that corresponds to each number category for each review score from 1 - 5, then find the review score and category occurring most frequently in the table.
-I don't understand the question.
+5	very good	57420
+4	good	19200
+1	poor	11858
+3	average	8287
+2	poor+	3235
 
 9. From the order_reviews table, find the review value occurring most frequently and how many times it occurs.
 5	57000

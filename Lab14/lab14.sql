@@ -72,6 +72,24 @@ FROM olist.order_reviews;
 
 -- 8. In the order_reviews table, create a new column with a description that corresponds 
 -- to each number category for each review score from 1 - 5, then find the review score and category occurring most frequently in the table.
+SELECT * from olist.order_reviews;
+
+SELECT
+review_score,
+CASE 
+	WHEN review_score = 1 THEN 'poor'
+    WHEN review_score = 2 THEN 'poor+'
+    WHEN review_score = 3 THEN 'average'
+    WHEN review_score = 4 THEN 'good'
+    ELSE 'very good'
+END as description,
+COUNT(review_id)
+FROM olist.order_reviews
+GROUP BY 
+review_score,
+description
+ORDER BY COUNT(review_id) DESC
+;
 
 -- 9. From the order_reviews table, find the review value occurring most frequently and how many times it occurs.
 SELECT
