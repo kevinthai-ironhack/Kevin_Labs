@@ -9,7 +9,7 @@ a.au_fname AS First_Name,
 c.title AS Title,
 d.pub_name AS Publisher
 
-FROM authors a 
+FROM authors a
 JOIN titleauthor b ON a.au_id = b.au_id
 JOIN titles c ON b.title_id = c.title_id
 JOIN publishers d ON c.pub_id = d.pub_id
